@@ -43,23 +43,17 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
       <p>
         Hi! I'm Daniel, an enthusiastic student of math and CS. This blog serves
-        as a collection of what interests me, some of which I hope you'll find
-        interesting as well.
+        as a collection of miscellaneous topics which interest me, some of which
+        I hope you'll find interesting as well. I also hope to keep all my
+        educational posts intuitive: key inspirations for my content include
+        3Blue1Brown, Veritasium, and Quantum Sense. If anything seems unclear,
+        feel free to open an issue or PR on GitHub.
       </p>
-      <p>
-        This blog is built with Sat Naing's
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper"
-        >
-          AstroPaper
-        </LinkButton> theme.
-      </p>
+      <p>Happy reading!</p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
           <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
             <Socials />
           </div>
         )
