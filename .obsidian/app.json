@@ -6,5 +6,7 @@
   "newFileFolderPath": "src/content/blog",
   "userIgnoreFilters": [
     "node_modules/"
-  ]
+  ],
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative"
 }
