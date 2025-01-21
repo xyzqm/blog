@@ -32,4 +32,4 @@ pnpm-debug.log*
 .pnp.*
 
 # obsidian
-.obsidian/workspace
+.obsidian/workspace.json
