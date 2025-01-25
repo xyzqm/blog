@@ -18,6 +18,6 @@ Some QOL settings to consider for Obsidian:
  ![](../../assets/images/Pasted%20image%2020250121141458.png)
  - Make sure to disable Wikilinks so your images link properly, as well as to properly set the default location for your new attachments. These options are also under **Files and Links**.
   ![](../../assets/images/Pasted%20image%2020250121142146.png)
-  - I enjoy using vertical/stacked tabs, which you can enable by opening the command palette with `cmd + p` and searching for the command "Toggle stacked tabs."
+  - I enjoy using vertical/stacked tabs, which you can enable by opening the command palette with `cmd + p` and searching for the command "Toggle stacked tabs." If you use a mouse, remember that you can scroll left/right with `shift + scroll`.
   ![](../../assets/images/Pasted%20image%2020250121144827.png)
   - I also use Vim mode together with the theme [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus).
