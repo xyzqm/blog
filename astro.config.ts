@@ -6,6 +6,7 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import rehypeCallouts from "rehype-callouts";
 import { SITE } from "./src/config";
 
 // https://astro.build/config
@@ -31,7 +32,7 @@ export default defineConfig({
         },
       ],
     ],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [rehypeCallouts, rehypeKatex],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },
