@@ -48,7 +48,7 @@ Let's visualize the action of $G \cdot x$ like so:
 If we construct such graphs for other possible states and transformations, we notice an interesting property: for every possible initial state $x$, every final state will have the same number of edges going into it. For instance, in the image above, with the initial state being the bottom grid, every final state has exactly 2 edges going into it. Let's denote this number of edges as $z_x$.
 
 >[!Note]
-> I hope the fact that each state has the same number of in-edges feels intuitive to you, and as such, I will not provide a proof here. If you are stuck, the most important property to remember here is the closure property of $G$.
+> I hope the fact that each state has the same number of in-edges feels intuitive to you, and as such, I will not provide a proof here. If you are stuck, the most important property to remember here is the closure property of $G$ and/or the fact that every element in $G$ has an inverse element.
 
 This means that the total number of actions, $|G|$, can be written as $|G| = \text{(number of states)} \cdot \text{(number of edges entering each state)} = |G \cdot x| \cdot z_x$. 
 
