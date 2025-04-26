@@ -50,7 +50,7 @@ If we construct such graphs for other possible states and transformations, we no
 >[!Note]
 > I hope the fact that each state has the same number of in-edges feels intuitive to you, and as such, I will not provide a proof here. If you are stuck, the most important property to remember here is the closure property of $G$ and/or the fact that every element in $G$ has an inverse element.
 
-This means that the total number of actions, $|G|$, can be written as $|G| = \text{(number of states)} \cdot \text{(number of edges entering each state)} = |G \cdot x| \cdot z_x$. 
+This means that the total number of actions, $|G|$, can be written as $|G| = \text{(number of possible final states)} \cdot \text{(number of edges entering each final state)} = |G \cdot x| \cdot z_x$. 
 
 Now we just need to know the best way to determine $z_x$. Since the number of incoming edges to all final states is the same, the most intuitive choice for the final state to consider is $x$ itself. Thus, we can define $G_x$ simply as the set of operations which leave $x$ unchanged, more commonly referred to as the [stabilizer of $x$](https://mathworld.wolfram.com/Stabilizer.html), and it then follows that $z_x = |G_x|$. We now arrive at the following important result, the **orbit-stabilizer theorem**:
 $$
@@ -62,7 +62,7 @@ $$
 $$
 To get Burnside's lemma, we need to apply one more trick to evaluate $\displaystyle\sum_{x\in X}|G_x|$. Consider the following diagram:
 ![md](../../assets/images/Pasted%20image%2020250425123825.png)
-A check/cross in a given position indicates whether each operation is a stabilizer of each state. Our current summation sums the red numbers (along the rows and where each red number is derived by counting the number of check marks in that row) but a standard combinatorial trick is to try summing the blue numbers (along the columns) instead. Observe that the blue number corresponding to each operation $g$ is precisely the number of elements $x$ for which $g \cdot x = x$, also referred to as the number of **fixed points** of $g$, $|X^g|$. 
+A check/cross in a given position indicates whether each operation is a stabilizer of each state. Our current summation sums the red numbers (along the rows) which are derived by counting the number of check marks in each row, but a standard combinatorial trick is to try summing the blue numbers (along the columns) instead. Observe that the blue number corresponding to each operation $g$ is precisely the number of elements $x$ for which $g \cdot x = x$, also referred to as the number of **fixed points** of $g$, $|X^g|$. 
 
 >[!Note]
 >This trick is more commonly referred to as *swapping the order of summation* as we can rewrite the visual approach presented above like so:
