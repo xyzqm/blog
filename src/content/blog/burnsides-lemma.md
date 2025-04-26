@@ -12,7 +12,7 @@ description: An intuitive introduction to Burnside's lemma.
 ---
 Consider the following problem: we have a 2x2 grid with 4 cells, each of which we can paint black or white. Two paintings are considered identical if they can be rotated to look the same. How many distinct paintings are there?
 
-Before we apply Burnside's Lemma to this problem, let's formalize the lemma's general conditions. The lemma requires a [**group**](https://en.wikipedia.org/wiki/Group_(mathematics)) of actions $G$ which act on a finite set $X$. In our case; in our case, $G$ consists of rotation by 0°, 90°, 180°, and 270°, and $X$ consists of all possible paintings, not necessarily rotationally distinct.
+Before we apply Burnside's Lemma to this problem, let's formalize the lemma's general conditions. The lemma requires a [**group**](https://en.wikipedia.org/wiki/Group_(mathematics)) of actions $G$ which act on a finite set $X$. In our case, $G$ consists of rotation by 0°, 90°, 180°, and 270°, and $X$ consists of all possible paintings, not necessarily rotationally distinct.
 
 Note that the term [**group**](https://en.wikipedia.org/wiki/Group_(mathematics)) has a very specific meaning in a math context. Importantly, if $a \cdot b$ denotes the action derived by first performing $b$, then $a$, then a group $G$ must satisfy the following four conditions:
 >[!Note] 
