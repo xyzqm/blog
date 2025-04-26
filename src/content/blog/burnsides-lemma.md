@@ -52,7 +52,7 @@ If we construct such graphs for other possible states and transformations, we no
 
 This means that the total number of actions, $|G|$, can be written as $|G| = \text{(number of states)} \cdot \text{(number of edges entering each state)} = |G \cdot x| \cdot z_x$. 
 
-Now we just need to know the best way to determine $z_x$. Since the number of incoming edges to all final states is the same, the most intuitive choice for the final state is $x$ itself. Thus, we can define $G_x$ simply as the set of operations which leave $x$ unchanged, more commonly referred to as the [stabilizer of $x$](https://mathworld.wolfram.com/Stabilizer.html), and we thus have $z_x = |G_x|$. We now arrive at the following result, the **orbit-stabilizer theorem**:
+Now we just need to know the best way to determine $z_x$. Since the number of incoming edges to all final states is the same, the most intuitive choice for the final state to consider is $x$ itself. Thus, we can define $G_x$ simply as the set of operations which leave $x$ unchanged, more commonly referred to as the [stabilizer of $x$](https://mathworld.wolfram.com/Stabilizer.html), and it then follows that $z_x = |G_x|$. We now arrive at the following important result, the **orbit-stabilizer theorem**:
 $$
 |G| = |G \cdot x| \cdot |G_x|
 $$
