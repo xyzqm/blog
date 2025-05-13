@@ -66,6 +66,9 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            blockquote: {
+              quotes: "none"
+            },
             pre: {
               color: false,
             },
