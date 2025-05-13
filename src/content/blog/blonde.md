@@ -3,7 +3,7 @@ author: Daniel Zhu
 pubDatetime: 2025-04-29T08:20:44-08:00
 title: Blonde
 slug: blonde
-featured: true
+featured: false
 draft: true
 tags:
   - "#music"

@@ -3,7 +3,7 @@ author: Daniel Zhu
 pubDatetime: 2025-01-24T15:07:35-08:00
 title: Breakdown
 slug: breakdown
-featured: true
+featured: false
 draft: false
 tags:
   - usaco

@@ -3,7 +3,7 @@ author: Daniel Zhu
 pubDatetime: 2025-01-21T13:57:97-08:00
 title: About this blog
 slug: about-this-blog
-featured: true
+featured: false
 draft: false
 tags:
   - misc
