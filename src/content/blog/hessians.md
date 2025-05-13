@@ -107,9 +107,9 @@ $$
 Thus, $H_f\begin{bmatrix}
 dx \\
 dy
-\end{bmatrix}$ is simply a **linear approximation** of the gradient at $(dx, dy)$.
+\end{bmatrix}$ is simply a **linear approximation** of the gradient at $(dx, dy)$! Let that sink in for a second, as this is the key idea behind the Hessian.
 
-Great, but how can we use this information to figure in which direction these gradients generally point: away from the origin, toward it, or a mix of both?
+Great, but how can we use this information to decide in which direction these gradients generally point: away from the origin, toward it, or a mix of both?
 
 ## III. PUTTING IT ALL TOGETHER
 
