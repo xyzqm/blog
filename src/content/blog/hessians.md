@@ -48,8 +48,7 @@ a clear saddle shape:
 | --- | --- |
 | ![md](../../assets/images/Pasted%20image%2020250512160105.png) | ![md](../../assets/images/Pasted%20image%2020250512160200.png) |
 
-Here, we see some vectors pointing toward the critical point, while some
-point away. This makes sense as a saddle point is, by definition, a local max along some paths and a local min along others.
+Here, we see some vectors pointing toward the critical point, while some point away. This makes sense as a saddle point is, by definition, a local max along some paths and a local min along others.
 
 These observations thus motivate a method to quickly check whether the gradients in the
 neighborhood of $(x, y)$ point away from, toward, or in both directions from
