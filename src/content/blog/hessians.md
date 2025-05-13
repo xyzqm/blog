@@ -8,7 +8,7 @@ draft: false
 tags:
   - math
   - "#calc"
-description: What does the Hessian really mean?
+description: What does the Hessian matrix really mean?
 ---
 
 Recently, I was taught the second derivative test for multivariable functions
