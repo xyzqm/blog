@@ -32,4 +32,7 @@ $$
 $$
 Dividing by $f$ on both sides, we arrive at the mirror formula!
 
-**Note:** I'm not actually sure if a similarly simple proof is possible for convex mirrors. If you know of one, please comment blow!
+~~**Note:** I'm not actually sure if a similarly simple proof is possible for convex mirrors. If you know of one, please comment blow!~~
+
+**Edit:** Here's a similar proof for the convex mirror case, courtesy of u/jamesw73721 on Reddit:
+![md](../../assets/images/Pasted%20image%2020250527103740.png)
