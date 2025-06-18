@@ -6,7 +6,8 @@ slug: mirror-formula
 featured: true
 draft: false
 tags:
-  - tag
+  - math
+  - physics
 description: A simple proof of the mirror formula.
 ---
 Consider the following setup, where an object is reflected off a concave mirror with focus at $F$:
