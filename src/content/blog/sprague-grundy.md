@@ -84,11 +84,11 @@ Enter: mex! Just like XOR, the use of the mex function in the Sprague-Grundy the
 Whaa? OK, let me describe this greedy algorithm to you first, without using mex at all.
 1. Topologically sort all game states (guaranteed to be possible since game is a DAG).
 2. Initialize our basis $X$ as an empty *list*, $[]$ (because order matters!).
-3. In reverse topological order, check if $G$ is independent of $X$. If yes, append $G$ to the end of $X$.
+3. In reverse topological order, check if our current game $G$ is independent of $X$. If yes, append $G$ to the end of $X$.
 
 And that's it!
 
-Wait, what? That's it? How is this even remotely related to mex? The key idea is to show that because of this greedy approach, the $i$th basis element $X_i$ has the property that it can transition to an equivalent state of **every** subset of the first $i$ basis elements. That is, for every $z < 2^i$, $X_i$ can transition to a state $Z$ such that $f_X(Z) = z$.
+Wait, what? That's it? How is this even remotely related to mex? And how do we check whether a game is independent of $X$? The key idea is to show that because of this specific greedy approach, the $i$th basis element $X_i$ has the property that it can transition to an equivalent state of **every** subset of the first $i$ basis elements. That is, for every $z < 2^i$, $X_i$ can transition to a state $Z$ such that $f_X(Z) = z$. This will enable us to implement a much faster check for independence.
 
 In fact, together with the properties of XOR, this claim generalizes to the following:
 >[!info] Lemma 4
@@ -108,7 +108,7 @@ Otherwise, we then need to prove is that $G \equiv M$, or that $G + M = 0$. We c
 Since the second player can always force the first player to begin their next turn on a P-position, it follows that $G + M$ must be a P-position itself. Therefore, $G \equiv M$, as desired.
 
 ---
-OK, that was a lot. But the primary takeaway is that the **entire reason** mex is used is because of the (surprisingly elegant) *greedy strategy* we used in order to find a valid basis. In fact, (don't quote me on this) this may be one of the *only* efficient strategies to compute a valid basis. In my description of the greedy algorithm earlier, Step 3 required checking whether the current game $G$ was indeed independent of the basis elements $X$ found thus far. If $X$ was just some arbitrary basis, this could have taken forever to check, and maybe even have been impossible. Thankfully, due to the nice structure our greedy algorithm imposes on $X$, we instead end up with a very quick and elegant way of evaluating independence.
+OK, that was a lot. But the primary takeaway is that the **entire reason** mex is used is because of the (surprisingly elegant) *greedy strategy* we used in order to find a valid basis. In fact, (don't quote me on this) this may be one of the *only* efficient strategies to compute a valid basis because of the issue of checking independence. If $X$ was just some arbitrary basis, this could have taken forever to check, and maybe even have been impossible. Thankfully, due to the nice structure our greedy algorithm imposes on $X$, we instead end up with a very quick and elegant way of evaluating independence.
 
 The best part? We derived all these beautiful results without referencing the game of Nim at all! The XOR relation arose naturally from the "mirror" nature of combining identical impartial games, and *mex* showed up as a direct result of the simple greedy strategy we defined to find a valid basis. This, I believe, is truly the best way to understand the *fundamental nature* of the Sprague-Grundy theorem.
 
