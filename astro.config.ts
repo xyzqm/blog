@@ -1,7 +1,5 @@
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
-import sitemap from "@astrojs/sitemap";
-import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeCallouts from "rehype-callouts";
 import { defineConfig, envField } from "astro/config";

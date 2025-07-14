@@ -11,14 +11,10 @@
             "id": "52e7cc89d1c69176",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/content/blog/sprague-grundy.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "sprague-grundy"
+              "title": "New tab"
             }
           }
         ]
@@ -96,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/content/blog/sprague-grundy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +101,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for sprague-grundy"
+              "title": "Backlinks"
             }
           },
           {
@@ -115,12 +110,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/content/blog/sprague-grundy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from sprague-grundy"
+              "title": "Outgoing links"
             }
           },
           {
@@ -144,13 +138,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/content/blog/sprague-grundy.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of sprague-grundy"
+              "title": "Outline"
             }
           }
         ]
@@ -173,43 +166,43 @@
   },
   "active": "52e7cc89d1c69176",
   "lastOpenFiles": [
-    "node_modules/@pagefind/darwin-arm64/bin/pagefind_extended-v1.3.0-aarch64-apple-darwin.tar.gz.sha256",
-    "node_modules/@pagefind/darwin-arm64/bin/pagefind-v1.3.0-aarch64-apple-darwin.tar.gz.sha256",
-    "node_modules/@pagefind/darwin-arm64/README.md",
-    "node_modules/@pagefind/darwin-arm64/package.json",
-    "node_modules/@pagefind/default-ui/npm_dist/mjs/ui-core.mjs",
-    "node_modules/@pagefind/default-ui/svelte/ui.svelte",
-    "node_modules/@pagefind/default-ui/svelte/result_with_subs.svelte",
-    "node_modules/@pagefind/default-ui/svelte/result.svelte",
-    "node_modules/@pagefind/default-ui/svelte/reset.svelte",
-    "node_modules/@pagefind/default-ui/svelte/filters.svelte",
-    "node_modules/@pagefind/default-ui/svelte",
-    "node_modules/@pagefind/default-ui/README.md",
-    "node_modules/@pagefind/default-ui/package.json",
-    "node_modules/pagefind/README.md",
-    "node_modules/@shikijs/transformers/README.md",
-    "node_modules/enhanced-resolve/README.md",
-    "node_modules/@tailwindcss/node/README.md",
-    "node_modules/@isaacs/fs-minipass/README.md",
-    "node_modules/tar/node_modules/yallist/README.md",
-    "node_modules/tar/node_modules/yallist/LICENSE.md",
-    "node_modules/tar/README.md",
-    "node_modules/@tailwindcss/vite/README.md",
-    "node_modules/minipass/README.md",
-    "node_modules/minizlib/README.md",
-    "node_modules/chownr/README.md",
-    "node_modules/chownr/LICENSE.md",
-    "node_modules/tapable/README.md",
-    "node_modules/graceful-fs/README.md",
-    "node_modules/@tailwindcss/oxide-darwin-arm64/README.md",
+    "src/content/blog/sprague-grundy.md",
+    "src/data/blog/blonde.md",
+    "src/data/blog/sprague-grundy.md",
+    "src/data/blog/hessians.md",
+    "src/data/blog/optics.md",
+    "src/data/blog/haskell-1.md",
+    "src/data/blog/burnsides-lemma.md",
+    "src/data/blog/about-this-blog.md",
+    "src/data/blog/breakdown.md",
+    "src/data/config.ts",
+    "src/data/blog",
+    "src/data",
     "node_modules/caniuse-lite/README.md",
-    "node_modules/lit-html/README.md",
+    "node_modules/caniuse-lite/data/regions/ZW.js",
+    "node_modules/caniuse-lite/package.json",
+    "node_modules/caniuse-lite/data/regions/YT.js",
+    "node_modules/caniuse-lite/data/features/zstd.js",
+    "node_modules/caniuse-lite/data/regions/ZM.js",
+    "node_modules/caniuse-lite/data/regions/ZA.js",
+    "node_modules/caniuse-lite/data/regions/YE.js",
     "node_modules/react-dom/README.md",
     "node_modules/katex/README.md",
-    "node_modules/lit/README.md",
+    "node_modules/@babel/traverse/README.md",
+    "node_modules/@babel/generator/README.md",
+    "node_modules/react/README.md",
+    "node_modules/@babel/helper-module-transforms/README.md",
+    "node_modules/fuse.js/README.md",
+    "node_modules/json5/README.md",
+    "node_modules/json5/LICENSE.md",
+    "node_modules/csstype/README.md",
+    "node_modules/@babel/helpers/README.md",
+    "node_modules/react-refresh/README.md",
+    "node_modules/katex/contrib/copy-tex/README.md",
+    "node_modules/katex/contrib/mhchem/README.md",
+    "node_modules/katex/contrib/mathtex-script-type/README.md",
+    "node_modules/katex/contrib/auto-render/README.md",
     "node_modules/lit/logo.svg",
-    "node_modules/@lit/reactive-element/README.md",
-    "node_modules/astro-eslint-parser/node_modules/entities/readme.md",
     "src/assets/images/forrest-gump-quote.png",
     "src/assets/images/AstroPaper-v5.png",
     "src/assets/icons/IconX.svg",
