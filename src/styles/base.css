@@ -1,3 +1,4 @@
+@import "rehype-callouts/theme/obsidian";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -128,5 +129,8 @@
   }
   img[alt="md"] {
     width: 400px;
+  }
+  .callout svg {
+    @apply fill-transparent!;
   }
 }

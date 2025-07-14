@@ -11,32 +11,42 @@ tags:
   - games
 description: Motivating the Sprague-Grundy theorem from first principles.
 ---
-First, a definition of an impartial game:
+Before we begin, you should probably familiarize yourself with a traditional explanation of the Sprague-Grundy theorem first, such as [this one](https://cp-algorithms.com/game_theory/sprague-grundy-nim.html).
 
-> [!note] Definition
-> Any impartial game can be thought of as DAG (directed acyclic graph) where nodes correspond to game states and edges correspond to possible moves. A player loses such a game when they have no moves left to play.
+> [!Note]
+> Game states will henceforth be referred to as *positions*. Note that any position can be thought of as a game itself: just take the subgraph of the overall DAG that is reachable from the current position.
 
-Theoretically, to solve any impartial game, we need only to determine one bit of information about every possible game state: whether the next player (about to make a move) wins, or loses. If the next player wins, the state is called an *N-position*; otherwise, if the previous player wins, the state is a *P-position*. Together, N-positions and P-positions comprise the two possible **outcome classes** of any impartial game.
+Theoretically, to solve any impartial game, we need only to determine one bit of information about every possible position: whether the next player (about to make a move) wins, or loses. If the next player wins, the state is called an *N-position*; otherwise, if the previous player wins, the state is a *P-position*. Together, N-positions and P-positions comprise the two possible **outcome classes** of any impartial game.
 
-However, let's say we want equivalence classes that are a bit more fine-grained. Why? Well, consider the operation of combining two games $G$ and $H$ in parallel, which means that these two games will be played side-by-side: on each player's turn, they can choose play on *exactly one* of the games, and leave the other one unchanged (a classic example of this would be a two-pile nim game). 
+![](../../assets/images/Pasted%20image%2020250711185348.png)
+*An example of a simple game, with positions labeled N or P. Recall that all games can be represented as DAGs (directed acyclic graphs).*
 
-From now on, we will denote this combination of games as $G + H$. 
->[!Note] 
-> Note that the $+$ operation as defined here is both commutative and associative. It also defines a group because the sum of two games is still a game.
+However, let's say we want equivalence classes that are a bit more fine-grained. Why? Well, consider the operation of combining two positions $G$ and $H$ (henceforth denoted as $G + H$) in parallel, which means that these two positions will be played side-by-side: on each player's turn, they can choose to move on *exactly one* of the positions, and leave the other unchanged (a classic example of this would be a two-pile Nim game). 
 
-Importantly, in order to determine the outcome class of $G + H$, it's not sufficient to know only the outcome classes of $G$ and $H$ individually. Specifically, if both $G$ and $H$ are N-positions, $G + H$ could still be either an N- or a P-position.
+> [!Note]
+> Considering the positions as DAGs, this $+$ operation corresponds precisely to a Cartesian product:
+> ![](../../assets/images/Pasted%20image%2020250711190852.png)
+> *A simple Cartesian product, illustrated. Each edge corresponds to a move on exactly one of the two parallel positions.*
+>
+> Note that the $+$ operation as defined here is both commutative and associative. It is also closed, since the Cartesian product of two DAGs is still a DAG.
+
+Importantly, under our current definition of equivalence by outcome classes (i.e. all N-positions are equivalent, as are all P-positions), equivalent positions **might not** produce equivalent results when combined with other positions. Specifically, two N-positions combined could produce either an N-position or a P-position.
+![](../../assets/images/Pasted%20image%2020250711203322.png)
+*Two N-positions combined don't always yield equivalent results.*
 
 This motivates a new definition of equivalence: 
->[!info] Definition
->$G \equiv G'$ iff for all games $H$, $G + H$ and $G' + H$ belong to the same outcome class.
+>[!tip] Definition
+>$G \equiv G'$ iff for all positions $H$, $G + H$ and $G' + H$ belong to the same outcome class.
+>
+> Note that this also means that if $G \equiv G'$, $G + H \equiv G' + H$ as well, since $+$ is closed.
 
-And the equivalence classes of games under this definition are precisely what the Sprague-Grundy theorem helps us find!
+And the equivalence classes of positions under this definition are precisely what the Sprague-Grundy theorem helps us find!
 
 >[!note]
 > While the Sprague-Grundy theorem is often thought of as a very general result, it's only really useful when games are being combined in parallel. Otherwise, the Grundy number has no real meaning.
 
 ---
-Let's consider the identity equivalence class, $0$. All games $G$ of this class, when added to any other game, will have no effect on their equivalence class; that is, $A \equiv A + G$ for all games $A$. A trivial example of such a game is the empty game $\{\}$, but there are actually more. In fact:
+Let's consider the identity equivalence class, $0$, defined such that for every game $G$ in this class, $A \equiv A + G$ for all games $A$. A trivial example of such a game is the empty game $\{\}$, but there are actually more. In fact:
 
 >[!info] Lemma 1
 > $0$ is exactly the set of all P-positions. 
