@@ -5,6 +5,9 @@
   img[alt="md"] {
     width: 400px;
   }
+  .callout {
+      @apply mix-blend-normal!;
+  }
   .callout svg {
     @apply fill-transparent;
   }

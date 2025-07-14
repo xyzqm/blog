@@ -166,6 +166,7 @@
   },
   "active": "52e7cc89d1c69176",
   "lastOpenFiles": [
+    "src/assets/icons/IconInstagram.svg",
     "src/content/blog/sprague-grundy.md",
     "src/data/blog/blonde.md",
     "src/data/blog/sprague-grundy.md",
@@ -201,7 +202,6 @@
     "node_modules/katex/contrib/copy-tex/README.md",
     "node_modules/katex/contrib/mhchem/README.md",
     "node_modules/katex/contrib/mathtex-script-type/README.md",
-    "node_modules/katex/contrib/auto-render/README.md",
     "node_modules/lit/logo.svg",
     "src/assets/images/forrest-gump-quote.png",
     "src/assets/images/AstroPaper-v5.png",

@@ -1,6 +1,7 @@
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 import rehypeCallouts from "rehype-callouts";
 import { defineConfig, envField } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
@@ -22,7 +23,7 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
+    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }], remarkMath],
     rehypePlugins: [rehypeCallouts, rehypeKatex],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
