@@ -3,7 +3,7 @@
   "showInlineTitle": false,
   "attachmentFolderPath": "src/assets/images",
   "newFileLocation": "folder",
-  "newFileFolderPath": "src/content/blog",
+  "newFileFolderPath": "src/data/blog",
   "userIgnoreFilters": [
     "node_modules/"
   ],

@@ -1,7 +1,7 @@
 ---
 author: Daniel Zhu
 pubDatetime: 2025-01-24T15:07:35-08:00
-title: Breakdown
+title: 'Editorial: "Breakdown"'
 slug: breakdown
 featured: false
 draft: false

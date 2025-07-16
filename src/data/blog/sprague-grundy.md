@@ -4,7 +4,7 @@ pubDatetime: 2025-07-11T09:05:44-08:00
 title: The Sprague-Grundy theorem
 slug: sprague-grundy
 featured: true
-draft: false
+draft: true
 tags:
   - programming
   - math
@@ -21,7 +21,7 @@ Theoretically, to solve any impartial game, we need only to determine one bit of
 ![](../../assets/images/Pasted%20image%2020250711185348.png)
 *An example of a simple game, with positions labeled N or P. Recall that all games can be represented as DAGs (directed acyclic graphs).*
 
-However, let's say we want equivalence classes that are a bit more fine-grained. Why? Well, consider the operation of combining two positions $G$ and $H$ (henceforth denoted as $G + H$) in parallel, which means that these two positions will be played side-by-side: on each player's turn, they can choose to move on *exactly one* of the positions, and leave the other unchanged (a classic example of this would be a two-pile Nim game). 
+However, let's say we want equivalence classes that are a bit more fine-grained. Why? Well, consider the operation of combining two positions $G$ and $H$ (henceforth denoted as $G + H$) in parallel, which means that these two positions will be played side-by-side: on each player's turn, they can choose to move on *exactly one* of the positions, and leave the other unchanged (a classic example of this would be a two-pile Nim game).
 
 > [!Note]
 > Considering the positions as DAGs, this $+$ operation corresponds precisely to a Cartesian product:
@@ -34,7 +34,7 @@ Importantly, under our current definition of equivalence by outcome classes (i.e
 ![](../../assets/images/Pasted%20image%2020250711203322.png)
 *Two N-positions combined don't always yield equivalent results.*
 
-This motivates a new definition of equivalence: 
+This motivates a new definition of equivalence:
 >[!tip] Definition
 >$G \equiv G'$ iff for all positions $H$, $G + H$ and $G' + H$ belong to the same outcome class.
 >
@@ -49,7 +49,7 @@ And the equivalence classes of positions under this definition are precisely wha
 Let's consider the identity equivalence class, $0$, defined such that for every game $G$ in this class, $A \equiv A + G$ for all games $A$. A trivial example of such a game is the empty game $\{\}$, but there are actually more. In fact:
 
 >[!info] Lemma 1
-> $0$ is exactly the set of all P-positions. 
+> $0$ is exactly the set of all P-positions.
 
 **Proof:**
 Let's pick some P-position $G$. We wish to prove that for all games $A$, $A \equiv A + G$. Note that this is actually equivalent to proving the simpler statement that for all games $A$, $A$ and $A + G$ belong to the same outcome class.
@@ -76,10 +76,10 @@ By the way, this property also gives us an easier way to check equivalence:
 > $G \equiv G'$ iff $G + G' = 0$.
 
 **Proof:**
-For all $A$, $A + G \equiv A + G + (G + G') \equiv A + (G + G) + G' \equiv A + G'$. 
+For all $A$, $A + G \equiv A + G + (G + G') \equiv A + (G + G) + G' \equiv A + G'$.
 
 ---
-Now, let's define a *basis* of games $X_i$ such that every game $G$ is equivalent to the sum of *exactly one* subset of $X$. Essentially, the games in $X$ must all be independent, as well as span all possible games under the $+$ operation. 
+Now, let's define a *basis* of games $X_i$ such that every game $G$ is equivalent to the sum of *exactly one* subset of $X$. Essentially, the games in $X$ must all be independent, as well as span all possible games under the $+$ operation.
 
 Then, using this basis, every equivalence class $G$ has a unique binary representation $f_X(G)$, where the $i$th bit of $f_X(G)$ denotes whether $X_i$ is a member of the equivalent subset or not. Importantly, combining two games in parallel then corresponds to simply XOR-ing these binary representations!
 
@@ -89,7 +89,7 @@ Well, not quite. See, we don't just have one choice of basis. Consider the game 
 
 What basis should we use then? And how do we even ensure our basis elements are independent?
 
-Enter: mex! Just like XOR, the use of the mex function in the Sprague-Grundy theorem is typically justified by converting all games into Nim. However, there again exists a more fundamental reason for its use: it encapsulates a clever *greedy algorithm* that helps us quickly find a valid basis.  
+Enter: mex! Just like XOR, the use of the mex function in the Sprague-Grundy theorem is typically justified by converting all games into Nim. However, there again exists a more fundamental reason for its use: it encapsulates a clever *greedy algorithm* that helps us quickly find a valid basis.
 
 Whaa? OK, let me describe this greedy algorithm to you first, without using mex at all.
 1. Topologically sort all game states (guaranteed to be possible since game is a DAG).
@@ -121,5 +121,3 @@ Since the second player can always force the first player to begin their next tu
 OK, that was a lot. But the primary takeaway is that the **entire reason** mex is used is because of the (surprisingly elegant) *greedy strategy* we used in order to find a valid basis. In fact, (don't quote me on this) this may be one of the *only* efficient strategies to compute a valid basis because of the issue of checking independence. If $X$ was just some arbitrary basis, this could have taken forever to check, and maybe even have been impossible. Thankfully, due to the nice structure our greedy algorithm imposes on $X$, we instead end up with a very quick and elegant way of evaluating independence.
 
 The best part? We derived all these beautiful results without referencing the game of Nim at all! The XOR relation arose naturally from the "mirror" nature of combining identical impartial games, and *mex* showed up as a direct result of the simple greedy strategy we defined to find a valid basis. This, I believe, is truly the best way to understand the *fundamental nature* of the Sprague-Grundy theorem.
-
-
