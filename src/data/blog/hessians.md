@@ -14,6 +14,7 @@ description: What does the Hessian matrix really mean?
 Recently, I was taught the second derivative test for multivariable functions
 $f(x, y)$, which goes something like this:
 
+> [!note] Theorem
 > Let $(x, y)$ be a critical point of $f$, and define $D$ to be
 > $f_{xx}(x, y) f_{yy}(x, y) - f_{xy}(x, y)^2$.
 > Then we have:
