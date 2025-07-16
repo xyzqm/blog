@@ -31,7 +31,7 @@ As it turns out, yes! And an even more beautiful fact is that if, at every time-
 
 However, I'd first like to offer my slightly less elegant approach:
 
-Let $S$ denote the set of *leaves* of the subgraph where the mole could currently be located---that is, the mole could be in any of these leaves or their ancestors. The key idea is that we can always query a node $x$ such that we either
+Let $S$ denote the set of *leaves* of the subgraph where the mole could currently be located---that is, the mole could be in any of these nodes, or their ancestors. The key idea is that we can always query a node $x$ such that we either
 1. Reduce our search space to a single chain, to which we can apply a simple binary search.
 2. Remove a single leaf from $|S|$, then replace all elements of $S$ with their parents.
 
