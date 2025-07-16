@@ -48,6 +48,7 @@ Otherwise, we eliminate $y$ from $S$, and since the mole must move up, all eleme
 Let $S_i$ denote $S$ after the $i$th query. Assume all queries have returned 0, since as soon as a query returns 1, we can find the mole in $\mathcal{O}(\log N)$ queries. Then, we have that
 1. $|S_{i + 1}| < |S_i|$
 2. All $S_i$ are disjoint, and thus $\sum |S_i| \leq N$
+
 Combining these two facts, we can show that using our strategy, no more than $\mathcal{O}(\sqrt{N})$ queries can return 0. Thus, our total runtime is $\mathcal{O}(\sqrt{N} + \log N) = \mathcal{O}(\sqrt{N})$.
 
 ---
