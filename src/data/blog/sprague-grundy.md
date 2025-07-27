@@ -4,7 +4,7 @@ pubDatetime: 2025-07-11T09:05:44-08:00
 title: The Sprague-Grundy theorem
 slug: sprague-grundy
 featured: true
-draft: true
+draft: false
 tags:
   - programming
   - math
@@ -46,13 +46,13 @@ And the equivalence classes of positions under this definition are precisely wha
 > While the Sprague-Grundy theorem is often thought of as a very general result, it's only really useful when games are being combined in parallel. Otherwise, the Grundy number has no real meaning.
 
 ---
-Let's consider the identity equivalence class, $0$, defined such that for every game $G$ in this class, $A \equiv A + G$ for all games $A$. A trivial example of such a game is the empty game $\{\}$, but there are actually more. In fact:
+Let's consider the identity equivalence class, $0$, defined such that for every position $G$ in this class, $A \equiv A + G$ for all games $A$. A trivial example of such a game is the empty position $\{\}$, but there are actually more. In fact:
 
 >[!info] Lemma 1
 > $0$ is exactly the set of all P-positions.
 
 **Proof:**
-Let's pick some P-position $G$. We wish to prove that for all games $A$, $A \equiv A + G$. Note that this is actually equivalent to proving the simpler statement that for all games $A$, $A$ and $A + G$ belong to the same outcome class.
+Let's pick some P-position $G$. We wish to prove that for all positions $A$, $A \equiv A + G$. Note that this is actually equivalent to proving the simpler statement that for all positions $A$, $A$ and $A + G$ belong to the same outcome class.
 
 If $A$ is an N-position, the first player can win $A + G$ like so:
 - Always play in $A$ according to their original strategy for $A$.
@@ -64,7 +64,7 @@ On the contrary, no N-position can be in $0$: a simple counter-case is $A = \{\}
 
 Another useful lemma:
 >[!info] Lemma 2
-> For all impartial games $G$, $G + G = 0$.
+> For all positions $G$, $G + G = 0$.
 
 **Proof:**
 Player 2 can always simply mirror Player 1's move. Thus, $G + G$ is a P-position and therefore is in $0$.
@@ -76,9 +76,11 @@ By the way, this property also gives us an easier way to check equivalence:
 > $G \equiv G'$ iff $G + G' = 0$.
 
 **Proof:**
-For all $A$, $A + G \equiv A + G + (G + G') \equiv A + (G + G) + G' \equiv A + G'$.
+For all $A$, $A + G \equiv A + G + (G + G') \equiv A + (G + G) + G' \equiv A + G'$. Here, we've used the fact that $+$ is associative.
 
 ---
+Now, let's figure out a methodical way to group positions into equivalence classes. We'll use the following procedure:
+
 Now, let's define a *basis* of games $X_i$ such that every game $G$ is equivalent to the sum of *exactly one* subset of $X$. Essentially, the games in $X$ must all be independent, as well as span all possible games under the $+$ operation.
 
 Then, using this basis, every equivalence class $G$ has a unique binary representation $f_X(G)$, where the $i$th bit of $f_X(G)$ denotes whether $X_i$ is a member of the equivalent subset or not. Importantly, combining two games in parallel then corresponds to simply XOR-ing these binary representations!

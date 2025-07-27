@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/data/blog/hessians.md",
+                "file": "src/data/blog/sprague-grundy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "hessians"
+              "title": "sprague-grundy"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/data/blog/hessians.md",
+                "file": "src/data/blog/sprague-grundy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for hessians"
+              "title": "Backlinks for sprague-grundy"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/data/blog/hessians.md",
+                "file": "src/data/blog/sprague-grundy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from hessians"
+              "title": "Outgoing links from sprague-grundy"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/data/blog/hessians.md",
+                "file": "src/data/blog/sprague-grundy.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of hessians"
+              "title": "Outline of sprague-grundy"
             }
           }
         ]
@@ -171,6 +171,7 @@
   },
   "active": "52e7cc89d1c69176",
   "lastOpenFiles": [
+    "src/data/blog/hessians.md",
     "src/data/blog/catch-the-mole.md",
     "src/assets/images/Pasted image 20250715182954.png",
     "src/assets/images/Pasted image 20250715182041.png",
@@ -201,7 +202,6 @@
     "dist/_astro/Pasted image 20250121144827.CcU5OffA_2rO7y7.webp",
     "src/data/blog/sprague-grundy.md",
     "src/data/blog/optics.md",
-    "src/data/blog/hessians.md",
     "src/data/blog/haskell-1.md",
     "src/data/blog/burnsides-lemma.md",
     "CHANGELOG.md",
