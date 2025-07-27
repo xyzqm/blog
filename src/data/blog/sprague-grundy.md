@@ -79,7 +79,6 @@ By the way, this property also gives us an easier way to check equivalence:
 For all $A$, $A + G \equiv A + G + (G + G') \equiv A + (G + G) + G' \equiv A + G'$. Here, we've used the fact that $+$ is associative.
 
 ---
-Now, let's figure out a methodical way to group positions into equivalence classes. We'll use the following procedure:
 
 Now, let's define a *basis* of games $X_i$ such that every game $G$ is equivalent to the sum of *exactly one* subset of $X$. Essentially, the games in $X$ must all be independent, as well as span all possible games under the $+$ operation.
 
