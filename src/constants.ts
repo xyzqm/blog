@@ -34,13 +34,13 @@ interface Social {
 export const SOCIALS: Social[] = [
   {
     name: "GitHub",
-    href: "https://github.com/xyzqm/astro-paper",
+    href: "https://github.com/xyzqm/blog",
     linkTitle: `${SITE.author} on GitHub`,
     icon: IconGitHub,
   },
   {
     name: "Instagram",
-    href: "https://github.com/xyzqm/astro-paper",
+    href: "https://www.instagram.com/daniel.z.27/",
     linkTitle: `${SITE.author} on Instagram`,
     icon: IconInstagram,
   },
